@@ -74,9 +74,9 @@ Skip this step if you plan to use the VsCode UI for this.
 
 ## 9 - Publish to GitHub
 
-![09_publish_to_github](images/09_publish_to_github.png)
+![08_publish_to_github](images/08_publish_to_github.png)
 
-![09_publish_to_github_2](images/09_publish_to_github_2.png)
+![08_publish_to_github_2](images/08_publish_to_github_2.png)
 
 # Repetive steps
 
@@ -84,6 +84,23 @@ Everytime you want to "upload" changes to your GitHub git repository, you need t
 
 ## git add
 
+Before you can bundle changes into a git commit you need to add files to your staging area, from which the commit is created.
+
+With this command you add a file to the git staging area
+```
+git add NAME_OF_YOUR_FILE
+```
+
+or add all files you've changed to your staging area
+```
+git add *
+```
+
 ## git commit
+
+Now you can finalize a git commit (think of a bundled package of changes). Enter the following command to create a git commit with your staged files and a commit message:
+```
+git commit
+```
 
 ## git push
