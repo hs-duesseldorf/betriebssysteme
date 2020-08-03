@@ -12,6 +12,7 @@
   - [git add](#git-add)
   - [git commit](#git-commit)
   - [git push](#git-push)
+  - [With the VsCode source control UI](#with-the-vscode-source-control-ui)
 
 # First Time Setup
 
@@ -115,3 +116,7 @@ to "upload" the current branch you are in (if you did not change, it should be n
 ```
 git push REMOTE_NAME BRANCH_NAME
 ```
+
+## With the VsCode source control UI
+
+![10_push_to_remote](images/10_push_to_remote.png)
