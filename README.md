@@ -104,3 +104,14 @@ git commit
 ```
 
 ## git push
+
+Now your local repository has new changes bundled as (a) commit(s). To update your remote repository on GitHub you need to use the push command.
+You can either just use
+```
+git push
+```
+to "upload" the current branch you are in (if you did not change, it should be named "master") to the origin remote, or decide which branch to push to which remote:
+
+```
+git push REMOTE_NAME BRANCH_NAME
+```
