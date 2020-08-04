@@ -2,17 +2,17 @@
   - [1 - Create GitHub Account](#1---create-github-account)
   - [2 - (Optional) Create GitHub private repository](#2---optional-create-github-private-repository)
   - [3 - Create local directory](#3---create-local-directory)
-  - [4 - Open with VsCode](#4---open-with-vscode)
-  - [5 - Install Microsoft C/C++ Extension](#5---install-microsoft-cc-extension)
+  - [4 - (Optional) Open with VsCode](#4---optional-open-with-vscode)
+  - [5 - (Optional) Install Microsoft C/C++ Extension](#5---optional-install-microsoft-cc-extension)
   - [6 - Open in terminal and setup git credentials](#6---open-in-terminal-and-setup-git-credentials)
   - [7 - (Optional) Init git repository](#7---optional-init-git-repository)
   - [8 - (Optional) Add remote](#8---optional-add-remote)
-  - [9 - Publish to GitHub](#9---publish-to-github)
+  - [9 - (GUI Alternative) Publish to GitHub](#9---gui-alternative-publish-to-github)
 - [Repetive steps](#repetive-steps)
   - [git add](#git-add)
   - [git commit](#git-commit)
   - [git push](#git-push)
-  - [With the VsCode source control UI](#with-the-vscode-source-control-ui)
+  - [(GUI Alternative) With the VsCode source control UI](#gui-alternative-with-the-vscode-source-control-ui)
 
 # First Time Setup
 
@@ -30,19 +30,23 @@ If you plan to use only the command line to perform git commands, use this step 
 
 ![03_create_local_directory](images/03_create_local_directory.png)
 
-## 4 - Open with VsCode
+## 4 - (Optional) Open with VsCode
 
 ![04_open_with_other_application](images/04_open_with_other_application.png)
 
 ![04_open_with_vscode](images/04_open_with_vscode.png)
 
-## 5 - Install Microsoft C/C++ Extension
+## 5 - (Optional) Install Microsoft C/C++ Extension
+
+If you want to have code completion and synthax check, you may install the official C/C++ VsCode extension from Microsoft:
 
 ![05_install_cc_pp_extension](images/05_install_cc_pp_extension.png)
 
 ## 6 - Open in terminal and setup git credentials
 
 ![06_open_in_terminal](images/06_open_terminal.png)
+
+*Alternatively, if you do not want to use VsCode for this, you can press **CTRL + SHIFT + T** to open a new terminal in Ubuntu.*
 
 Enter your GitHub git username and email into the terminal with
 ```bash
@@ -61,9 +65,9 @@ git init
 
 __OR__ by using the VsCode source control section form the left panel.
 
-Attention: Skip this step if you want to use the GitHub integration to publish a new repository.
+**Attention**: Skip this step if you want to use the GitHub integration to publish a new repository (Step 9).
 
-![06_initi_git_repository](images/07_init_git_repository.png)
+![06_init_git_repository](images/07_init_git_repository.png)
 
 ## 8 - (Optional) Add remote
 
@@ -73,7 +77,9 @@ git remote add origin https://github.com/YOUR_GITHUB_ACCOUNT_NAME/YOUR_GITHUB_RE
 ```
 Skip this step if you plan to use the VsCode UI for this.
 
-## 9 - Publish to GitHub
+## 9 - (GUI Alternative) Publish to GitHub
+
+If you skipped steps 2, 7 and 8 you can now click the "Publish to GitHub" button, to create a private repository on GitHub, add the GitHub repository as a remote to your local repository and publish your local repository for the first time - all in one click. You will be asked to authorize VsCode to be connected to GitHub, so you do not need to enter your GitHub credentials every time you push a commit:
 
 ![08_publish_to_github](images/08_publish_to_github.png)
 
@@ -117,6 +123,11 @@ to "upload" the current branch you are in (if you did not change, it should be n
 git push REMOTE_NAME BRANCH_NAME
 ```
 
-## With the VsCode source control UI
+## (GUI Alternative) With the VsCode source control UI
+
+Alternatively, you can use VsCode (or any other git client) to stage, commit, switch branch, pull, push, fetch or to use any other git command.
+
+
+![](images/09_stage_and_commit.png)
 
 ![10_push_to_remote](images/10_push_to_remote.png)
