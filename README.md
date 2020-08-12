@@ -14,7 +14,7 @@
     - [git commit](#git-commit)
     - [git push](#git-push)
     - [(GUI Alternative) With the VsCode source control UI](#gui-alternative-with-the-vscode-source-control-ui)
-- [Internship 01](#internship-01)
+- [Course 01 - Learning Linux basics](#course-01---learning-linux-basics)
   - [Learning Linux bash basics](#learning-linux-bash-basics)
     - [mkdir](#mkdir)
     - [cd](#cd)
@@ -25,11 +25,21 @@
     - [mv](#mv)
     - [rm](#rm)
     - [cat](#cat)
-  - [Create a C program that returns its arguments](#create-a-c-program-that-returns-its-arguments)
+  - [Create a simple C program that returns its arguments](#create-a-simple-c-program-that-returns-its-arguments)
   - [compile](#compile)
   - [run](#run)
+- [Course 02 - System calls for process management](#course-02---system-calls-for-process-management)
+  - [Level 1 - simple shell](#level-1---simple-shell)
+  - [Level 2 - multiple child processes](#level-2---multiple-child-processes)
+- [Course 03 - communication via sockets](#course-03---communication-via-sockets)
+  - [Part 1 - Server](#part-1---server)
+  - [Part 2 - Client](#part-2---client)
+  - [(Optional) Part 3 - Bonus](#optional-part-3---bonus)
+- [Course 04 - system calls for file management](#course-04---system-calls-for-file-management)
 
 # How to save your code with git and GitHub
+
+To save your code in this internship we recommend to use git and a git server such as GitHub. However you can save your code as you wish.
 
 ## First Time Setup
 
@@ -144,16 +154,19 @@ git push REMOTE_NAME BRANCH_NAME
 
 Alternatively, you can use VsCode (or any other git client) to stage, commit, switch branch, pull, push, fetch or to use any other git command.
 
-
 ![](images/09_stage_and_commit.png)
 
 ![10_push_to_remote](images/10_push_to_remote.png)
 
-# Internship 01
+# Course 01 - Learning Linux basics
+
+*Dislaimer*: even if we talk about Linux here, most if not all commands should also work on other unix systems such as MacOs, however it has only been tested on Linux.
 
 ## Learning Linux bash basics
 
-Information about how to use GNU utils can be gathered with calling the terminal program ```man```. 
+For all of the following commands you need a command line interface such as GNOME terminal in Ubuntu (CTRL + ALT + T) or the built-in terminal in vscode.
+
+Information about how to use the commands can be gained with calling the terminal program ```man```. 
 
 For example:
 
@@ -250,16 +263,16 @@ cat > my_new_file
 my name is Hans # quit with CTRL + C
 ```
 
-## Create a C program that returns its arguments
+## Create a simple C program that returns its arguments
 
-Use either terminal editors like ```vi``` or ```nano``` or a more comfortable solution like vscode & C/C++ extension to create a C program that returns the arguments that you've entered.
+Use either terminal editors like ```vi``` or ```nano``` or a more comfortable solution like vscode & C/C++ extension to create a C program ```my_arg.c``` that returns the arguments that you've entered.
 
 ## compile
 
-Compile your created C program with the following shell command, where ```MyArg``` is the name of the *output file* (thus the argument ```-o```) which you can chose and ```MyArg.c``` is the C file you've previously created and the source of the compilation:
+Compile your created C program with the following shell command, where ```my_arg``` is the name of the *output file* (thus the argument ```-o```) which you can chose and ```my_arg.c``` is the C file you've previously created and the source of the compilation:
 
 ```bash
-gcc -o MyArg MyArg.c
+gcc -o my_arg my_arg.c
 ```
 
 ## run
@@ -267,11 +280,118 @@ gcc -o MyArg MyArg.c
 To run your program in the terminal run it with a trailing ```./``` before its file name:
 
 ```bash
-./MyArg
+./my_arg
 ```
 
 Add any strings you can chose to have arguments as your output:
 
 ```bash
-./MyArg 2020 is the year of the linux desktop
+./my_arg 2021 is the year of the linux desktop
 ```
+
+# Course 02 - System calls for process management
+
+## Level 1 - simple shell
+
+Write a C-program ```my_shell.c``` that includes the following structure and test your program with the command ```date``` and with ```/bin/date```:
+
+```C
+...
+while(1) {
+  print_command_promt();
+  read_and_save_command();
+
+  if(fork() > 0) {
+    /* parent process */
+    wait(status);
+  }
+  else {
+    /* child process */
+    execve(command, ...);
+  }
+}
+...
+```
+
+Tips:
+- use the well known functions ```scanf()``` and ```printf()``` for I/O
+- design your program to ignore arguments attached to ```./my_shell.c```
+- print the return value and the value of the ```errno``` variable of each syscall (set ```errno``` to ```0``` before calling it)
+
+## Level 2 - multiple child processes
+
+Write a C-program ```my_fork.c```:
+- create ten child processes with a break of one second between each fork()
+- every child process should sleep() for 30 seconds and should terminate after
+- after the parent process has created the child process, it should wait() for the termination of the son process
+
+Tips:
+- print out what is happening in your program with proper printf()'s at each step
+- run your program ```my_fork.c``` in the background (```/my_fork.c &```) and show the processes with ```ps```
+
+# Course 03 - communication via sockets
+
+Create a client/server application to communicate via sockets.
+
+## Part 1 - Server
+
+Create the C program ```server.c``` that receives a port as an argument and runs the following system calls:
+1. ```socket``` - create a socket
+2. ```bind``` - bind the port you've given the server via the argument to the socket you've created
+3. ```listen```: marks the socket as passive and ready for incoming connections
+4. endless loop:
+   1. ```accept``` - wait and accept a client request
+   2. ```recv``` - process the client message
+   3. ```send``` - send the string "SERVER" in return
+   4. ```close``` - close the connection
+
+## Part 2 - Client
+
+Create the C program ```client.c``` that digests the given name and port of the target system and runs the following system calls:
+1. ```socket``` - creation of a socket
+2. ```connect``` - connect to the server
+3. ```send``` - send "CLIENT" to the server
+4. ```recv``` - receive and print the response
+5. ```close``` - close the connection
+
+## (Optional) Part 3 - Bonus
+
+- The server provides the following services:
+  - add
+  - sub
+  - div
+  - null
+- Create a struct ```message``` in ```message.h``` to define the structure of the provided services
+- expand the client:
+  - after the connection is set, read a math task in the form of ```7 + 5``` with ```scanf()```
+  - package the task into a ```message``` and send it to the server
+  - after the client has received the answer from the server the server message will be "unziped" and printed to the terminal
+- expand the server
+  - the client math task will be extracted from the client message
+  - the task will be calculated
+  - the result will be put into an answer message
+
+
+
+
+# Course 04 - system calls for file management
+
+General must-haves for your programs:
+
+1. Implement an argument check at the start of your programs - if the amount of arguments or the arguments are wrong the programs should terminate with a ```printf()``` tip for the correct arguments
+2. You must check the return values of the sys calls
+3. If an error occurs you must check the ```errno``` variable and ```printf()``` the corresponding error message
+
+To-Do:
+
+1. ```my_creat [filename] [text]```: creates a file with a given ```fileame``` and writes the given ```text``` into it 
+2. ```my_open [filename]```: opens a file and prints the content
+3. ```my_lseek [filename]```: opens a file, moves with ```lseek``` to end end of file, increases the file by 20 chars with ```lseek```, writes text at the end of the file and returns the content of the file with ```read```
+4. ```my_stat [filename]```: prints the attributes of the file with ```fstat```. Tip: the ```time_t``` attributes can be converted into a date format with ```localtime```
+
+Bonus:
+
+5. ```my_chmod [filename] [mode]```: sets the mode of a file with ```fchmod```
+6. ```my_access [filename]```: prints the permissions of a file
+7. ```my_mkdir [dirname] [mode]```: creates a directory with a given name and permissions
+8. ```my_read_dir [dirname]```: prints the contents of the given directory
