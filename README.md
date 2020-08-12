@@ -357,10 +357,10 @@ Create the C program ```client.c``` that digests the given name and port of the 
 ## (Optional) Part 3 - Bonus
 
 - The server provides the following services:
-  - add
-  - sub
-  - div
-  - null
+  - add - addition of two integers
+  - sub - subtraction of two integers
+  - div - division of two integers
+  - mul - multiplication of two integers
 - Create a struct ```message``` in ```message.h``` to define the structure of the provided services
 - expand the client:
   - after the connection is set, read a math task in the form of ```7 + 5``` with ```scanf()```
