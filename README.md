@@ -347,7 +347,7 @@ Create the C program ```server.c``` that receives a port as an argument and runs
 
 ## Part 2 - Client
 
-Create the C program ```client.c``` that digests the given name and port of the target system and runs the following system calls:
+Create the C program ```client.c``` that connects to the given name and port of the target system and runs the following system calls:
 1. ```socket``` - creation of a socket
 2. ```connect``` - connect to the server
 3. ```send``` - send "CLIENT" to the server
