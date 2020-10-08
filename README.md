@@ -1,4 +1,4 @@
-- [How to save your code with git and GitHub](#how-to-save-your-code-with-git-and-github)
+- [Course 00 - How to save your code with git and GitHub](#course-00---how-to-save-your-code-with-git-and-github)
   - [First Time Setup](#first-time-setup)
     - [1 - Create GitHub Account](#1---create-github-account)
     - [2 - (Optional) Create GitHub private repository](#2---optional-create-github-private-repository)
@@ -37,9 +37,17 @@
   - [(Optional) Part 3 - Bonus](#optional-part-3---bonus)
 - [Course 04 - system calls for file management](#course-04---system-calls-for-file-management)
 
-# How to save your code with git and GitHub
+# Course 00 - How to save your code with git and GitHub
 
 To save your code in this internship we recommend to use git and a git server such as GitHub. However you can save your code as you wish.
+
+**Please make sure you have either a [virtual machine](https://www.virtualbox.org/wiki/Downloads) or your host running with [Ubuntu Desktop](https://ubuntu.com/download/desktop)!**
+
+Tutorials:
+
+- [How to create an Ubuntu USB stick on Windows](https://ubuntu.com/tutorials/create-a-usb-stick-on-windows#1-overview)
+- [How to create an Ubuntu USB stick on MacOS](https://ubuntu.com/tutorials/create-a-usb-stick-on-macos#1-overview)
+- [How to install Ubuntu](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview)
 
 ## First Time Setup
 
