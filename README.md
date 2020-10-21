@@ -19,7 +19,7 @@
     - [git add](#git-add)
     - [git commit](#git-commit)
     - [git push](#git-push)
-      - [Vscode-only users](#vscode-only-users)
+    - [Vscode-only users](#vscode-only-users)
 - [Course 01 - Learning Linux basics](#course-01---learning-linux-basics)
   - [Learning Linux bash basics](#learning-linux-bash-basics)
     - [mkdir](#mkdir)
@@ -197,7 +197,7 @@ to "upload" the current branch you are in (if you did not change, it should be n
 git push REMOTE_NAME BRANCH_NAME
 ```
 
-#### Vscode-only users
+### Vscode-only users
 
 Alternatively, you can use VsCode (or any other git client) to stage, commit, switch branch, pull, push, fetch or to use any other git command.
 
