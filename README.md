@@ -16,9 +16,9 @@
       - [6 - Publish to GitHub](#6---publish-to-github)
   - [Repetive steps](#repetive-steps)
     - [Terminal-only users](#terminal-only-users)
-    - [git add](#git-add)
-    - [git commit](#git-commit)
-    - [git push](#git-push)
+      - [git add](#git-add)
+      - [git commit](#git-commit)
+      - [git push](#git-push)
     - [Vscode-only users](#vscode-only-users)
 - [Course 01 - Learning Linux basics](#course-01---learning-linux-basics)
   - [Learning Linux bash basics](#learning-linux-bash-basics)
@@ -163,7 +163,7 @@ Everytime you want to "upload" changes to your GitHub git repository, you need t
 
 ### Terminal-only users
 
-### git add
+#### git add
 
 Before you can bundle changes into a git commit you need to add files to your staging area, from which the commit is created.
 
@@ -177,14 +177,14 @@ or add all files you've changed to your staging area
 git add *
 ```
 
-### git commit
+#### git commit
 
 Now you can finalize a git commit (think of a bundled package of changes). Enter the following command to create a git commit with your staged files and a commit message:
 ```
 git commit -m "your commit message"
 ```
 
-### git push
+#### git push
 
 Now your local repository has new changes bundled as (a) commit(s). To update your remote repository on GitHub you need to use the push command.
 You can either just use
