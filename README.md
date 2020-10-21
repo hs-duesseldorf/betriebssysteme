@@ -1,10 +1,10 @@
 - [Course 00 - How to save your code with git and GitHub](#course-00---how-to-save-your-code-with-git-and-github)
   - [First Time Setup](#first-time-setup)
-    - [1 - Create GitHub Account](#1---create-github-account)
-    - [2 - (Optional) Create GitHub private repository](#2---optional-create-github-private-repository)
-    - [3 - Create local directory](#3---create-local-directory)
-    - [4 - (Optional) Open with VsCode](#4---optional-open-with-vscode)
-    - [5 - (Optional) Install Microsoft C/C++ Extension](#5---optional-install-microsoft-cc-extension)
+    - [1 - (Optional) Install VsCode & C/C++ Extension](#1---optional-install-vscode--cc-extension)
+    - [2 - Create GitHub Account](#2---create-github-account)
+    - [3 - (Optional) Create GitHub private repository](#3---optional-create-github-private-repository)
+    - [4 - Create local directory](#4---create-local-directory)
+    - [5 - (Optional) Open with VsCode](#5---optional-open-with-vscode)
     - [6 - Open in terminal and setup git credentials](#6---open-in-terminal-and-setup-git-credentials)
     - [7 - (Optional) Init git repository](#7---optional-init-git-repository)
     - [8 - (Optional) Add remote](#8---optional-add-remote)
@@ -51,31 +51,41 @@ Tutorials:
 
 ## First Time Setup
 
-### 1 - Create GitHub Account
+### 1 - (Optional) Install VsCode & C/C++ Extension
+
+If you do not wish to use the text editors `vi` or `nano` inside the terminal, you can chose to install vscode, which brings features like synthax highlighting, intellisense autocomplete and more for editing C-Files. To do so, run the following command in Ubuntu:
+
+```bash
+sudo snap install code --classic
+```
+
+Or click here:
+
+<iframe src="https://snapcraft.io/code/embedded?button=black" frameborder="0" width="100%" height="310px" style="border: 1px solid #CCC; border-radius: 2px;"></iframe>
+
+Start vscode and install the C/C++ extension from Microsoft:
+
+![05_install_cc_pp_extension](images/05_install_cc_pp_extension.png)
+
+### 2 - Create GitHub Account
 
 ![01_create_github_account](images/01_create_github_account.png)
 
-### 2 - (Optional) Create GitHub private repository
+### 3 - (Optional) Create GitHub private repository
 
 If you plan to use only the command line to perform git commands, use this step to create a repository in your GitHub space. If you plan to use the source control panel from within vscode, skip this step:
 
 ![02_create_repository](images/02_create_repository.png)
 
-### 3 - Create local directory
+### 4 - Create local directory
 
 ![03_create_local_directory](images/03_create_local_directory.png)
 
-### 4 - (Optional) Open with VsCode
+### 5 - (Optional) Open with VsCode
 
 ![04_open_with_other_application](images/04_open_with_other_application.png)
 
 ![04_open_with_vscode](images/04_open_with_vscode.png)
-
-### 5 - (Optional) Install Microsoft C/C++ Extension
-
-If you want to have code completion and synthax check, you may install the official C/C++ VsCode extension from Microsoft:
-
-![05_install_cc_pp_extension](images/05_install_cc_pp_extension.png)
 
 ### 6 - Open in terminal and setup git credentials
 
