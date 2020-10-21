@@ -91,7 +91,8 @@ so every time you make a git commit, your username and email will be written int
 
 #### 5 - Init git repository
 
-Initialize your new local git repository with __EITHER__ using the git init command:
+Initialize your new local git repository with the git init command:
+
 ```bash
 git init
 ```
