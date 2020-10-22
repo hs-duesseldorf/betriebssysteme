@@ -315,7 +315,7 @@ my name is Hans # quit with CTRL + C
 
 Use either terminal editors like ```vi``` or ```nano``` or a more comfortable solution like vscode & C/C++ extension to create a C program ```my_arg.c``` that returns the arguments that you've entered.
 
-## compile
+### compile
 
 Compile your created C program with the following shell command, where ```my_arg``` is the name of the *output file* (thus the argument ```-o```) which you can chose and ```my_arg.c``` is the C file you've previously created and the source of the compilation:
 
@@ -323,7 +323,7 @@ Compile your created C program with the following shell command, where ```my_arg
 gcc -o my_arg my_arg.c
 ```
 
-## run
+### run
 
 To run your program in the terminal run it with a trailing ```./``` before its file name:
 
