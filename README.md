@@ -94,6 +94,7 @@ so every time you make a git commit, your username and email will be written int
 Initialize your new local git repository with the git init command:
 
 ```bash
+cd bs
 git init
 ```
 
