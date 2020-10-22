@@ -59,6 +59,16 @@ Tutorials:
 
 ### For terminal-only users
 
+#### 0 - Install git
+
+*Press **CTRL + ALT + T** to open a new terminal in Ubuntu.*
+
+Run the following command to install git
+
+```bash
+sudo apt install git
+```
+
 #### 1 - Create GitHub Account
 
 ![01_create_github_account](images/01_create_github_account.png)
@@ -110,6 +120,16 @@ ________________________________________________________________________
 
 
 ### For vscode-only users
+
+#### 0 - Install git
+
+*Press **CTRL + ALT + T** to open a new terminal in Ubuntu.*
+
+Run the following command to install git
+
+```bash
+sudo apt install git
+```
 
 #### 1 - Create GitHub Account
 
