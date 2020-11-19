@@ -1,6 +1,7 @@
 - [Course 00 - How to save your code with git and GitHub](#course-00---how-to-save-your-code-with-git-and-github)
   - [First Time Setup](#first-time-setup)
     - [For terminal-only users](#for-terminal-only-users)
+      - [0 - Install git](#0---install-git)
       - [1 - Create GitHub Account](#1---create-github-account)
       - [2 - Create GitHub private repository](#2---create-github-private-repository)
       - [3 - Create local directory](#3---create-local-directory)
@@ -8,6 +9,7 @@
       - [5 - Init git repository](#5---init-git-repository)
       - [6 - Add remote](#6---add-remote)
     - [For vscode-only users](#for-vscode-only-users)
+      - [0 - Install git](#0---install-git-1)
       - [1 - Create GitHub Account](#1---create-github-account-1)
       - [2 - Install VsCode & C/C++ Extension](#2---install-vscode--cc-extension)
       - [3 - Create local directory in your desired location](#3---create-local-directory-in-your-desired-location)
@@ -32,8 +34,9 @@
     - [rm](#rm)
     - [cat](#cat)
   - [Create a simple C program that returns its arguments](#create-a-simple-c-program-that-returns-its-arguments)
-  - [compile](#compile)
-  - [run](#run)
+  - [install gcc](#install-gcc)
+    - [compile](#compile)
+    - [run](#run)
 - [Course 02 - System calls for process management](#course-02---system-calls-for-process-management)
   - [Level 1 - simple shell](#level-1---simple-shell)
   - [Level 2 - multiple child processes](#level-2---multiple-child-processes)
@@ -334,7 +337,15 @@ my name is Hans # quit with CTRL + C
 
 ## Create a simple C program that returns its arguments
 
-Use either terminal editors like ```vi``` or ```nano``` or a more comfortable solution like vscode & C/C++ extension to create a C program ```my_arg.c``` that returns the arguments that you've entered.
+Use either terminal editors like ```vi``` or ```nano``` or a more comfortable solution like vscode & C/C++ extension to create a C program ```my_arg.c``` **that returns the arguments that you've entered.**
+
+## install gcc
+
+To use the C-Compiler you need to install it first with:
+
+```
+sudo apt install gcc
+```
 
 ### compile
 
