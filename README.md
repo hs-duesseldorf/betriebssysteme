@@ -243,7 +243,13 @@ Information about how to use the commands can be gained with calling the termina
 For example:
 
 ```bash
-man cd
+man pwd
+```
+
+***Info:** some very important shell commands are not called from a different binary but are built in in the shell.
+You can read the manual here with*
+```bash
+man builtins
 ```
 
 ```man``` should be your primary source of information about a terminal program in the following internships. It comes preinstalled with most Linux distributions and does not need any internet connection.
