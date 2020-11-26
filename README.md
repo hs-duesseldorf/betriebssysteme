@@ -39,7 +39,7 @@
     - [run](#run)
 - [Course 02 - System calls for process management](#course-02---system-calls-for-process-management)
   - [Level 1 - simple shell](#level-1---simple-shell)
-  - [Level 2 - multiple child processes](#level-2---multiple-child-processes)
+  - [(Bonus - not necessarily needed) Level 2 - multiple child processes](#bonus---not-necessarily-needed-level-2---multiple-child-processes)
 - [Course 03 - communication via sockets](#course-03---communication-via-sockets)
   - [Part 1 - Server](#part-1---server)
   - [Part 2 - Client](#part-2---client)
@@ -404,7 +404,7 @@ Tips:
 - design your program to ignore arguments attached to ```./my_shell.c```
 - print the return value and the value of the ```errno``` variable of each syscall (set ```errno``` to ```0``` before calling it)
 
-## Level 2 - multiple child processes
+## (Bonus - not necessarily needed) Level 2 - multiple child processes
 
 Write a C-program ```my_fork.c```:
 - create ten child processes with a break of one second between each fork()
